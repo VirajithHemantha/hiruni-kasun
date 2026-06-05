@@ -661,7 +661,7 @@ export default function WeddingInvitation() {
                   className="mb-8"
                 >
                   <h2 className="text-xl md:text-2xl text-[#3f7a39] tracking-[0.5em] font-bold">
-                    විවාහ උත්සවය
+                    ශ්‍රී සුභ මංගලම්
                   </h2>
                 </motion.div>
 
@@ -771,10 +771,6 @@ export default function WeddingInvitation() {
                   transition={{ duration: 1 }}
                   className="relative mb-20"
                 >
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[18vw] md:text-[220px] text-white/5 whitespace-nowrap pointer-events-none select-none tracking-wider">
-                    සදාකාලික
-                  </div>
-
                   <div className="relative z-10 flex flex-col items-center">
                     <motion.div
                       initial={{ width: 0 }}
@@ -926,11 +922,11 @@ export default function WeddingInvitation() {
 
                 <div className="mt-32 flex flex-col items-center gap-6 text-center w-full max-w-xl">
                   <div className="h-px w-24 bg-slate-300" />
-                  <p className="text-slate-500 text-xs tracking-[0.4em] font-bold mt-2">
+                  <p className="text-slate-500 text-sm md:text-xs tracking-[0.4em] font-bold mt-2">
                     සම්බන්ධතා
                   </p>
 
-                  <div className="flex flex-wrap justify-center gap-x-10 gap-y-4 text-slate-500 text-sm md:text-base tracking-widest font-normal opacity-80 decoration-slate-300 underline-offset-4">
+                  <div className="flex flex-wrap justify-center gap-x-10 gap-y-4 text-slate-500 text-lg md:text-base tracking-widest font-normal opacity-80 decoration-slate-300 underline-offset-4">
                     {INVITATION.rsvpContacts.map((line) => (
                       <p key={line}>{line}</p>
                     ))}
@@ -939,150 +935,7 @@ export default function WeddingInvitation() {
               </div>
             </section>
 
-            <section className="relative py-28 md:py-48 bg-transparent overflow-hidden">
-              <div className="container mx-auto px-6 max-w-7xl relative z-10 text-center">
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  className="space-y-10 mb-24"
-                >
-                  <div className="flex flex-col items-center gap-4">
-                    <span className="text-[#2d5a27] font-bold tracking-[0.8em] text-sm md:text-base opacity-40">
-                      උත්සව ස්ථානය
-                    </span>
-                    <div className="flex items-center gap-2">
-                      {[1, 2, 3].map((i) => (
-                        <div
-                          key={i}
-                          className={`w-1.5 h-1.5 rotate-45 ${i === 2 ? "bg-[#3f7a39]" : "bg-[#2d5a27]/20"}`}
-                        />
-                      ))}
-                    </div>
-                  </div>
 
-                  <h2 className="text-5xl md:text-9xl bg-gradient-to-br from-[#3f7a39] to-[#2d5a27] bg-clip-text text-transparent leading-tight font-light tracking-tight relative">
-                    {INVITATION.venue.name}
-                  </h2>
-
-                  <div className="max-w-xl mx-auto pt-10 relative">
-                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-px bg-[#a2c5a0]" />
-                    <p className="text-[#2d5a27]/80 text-sm md:text-base tracking-[0.2em] font-medium leading-loose pt-8">
-                      සම්ප්‍රදාය, අලංකාරය සහ නව ඇරඹුමක සුන්දරත්වය එක්වන තැන
-                    </p>
-                  </div>
-                </motion.div>
-
-                <div className="grid lg:grid-cols-12 gap-16 lg:gap-24 items-center">
-                  <div className="lg:col-span-5 text-left order-2 lg:order-1">
-                    <motion.div
-                      initial={{ opacity: 0, x: -40 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: 0.2, duration: 0.8 }}
-                      className="bg-white p-10 md:p-16 shadow-[0_60px_100px_-40px_rgba(45,90,39,0.1)] border border-[#a2c5a0]/30 relative group"
-                    >
-                      <div className="absolute inset-2 border-[0.5px] border-[#3f7a39]/20 pointer-events-none group-hover:border-[#3f7a39]/40 transition-colors duration-700" />
-
-                      <div className="space-y-12 relative z-10">
-                        <div className="space-y-6">
-                          <p className="text-[#2d5a27] text-xl md:text-2xl font-light italic leading-relaxed text-center lg:text-left">
-                            “අපගේ ආදර කතාවේ අලංකාරම පරිච්ඡේදය ඔබ සමඟ සැමරීමට අප සතුටින් බලා සිටිමු.”
-                          </p>
-                          <div className="h-0.5 w-12 bg-[#a2c5a0]/60 mx-auto lg:ml-0" />
-                        </div>
-
-                        <div className="space-y-10">
-                          <div className="flex items-start gap-8">
-                            <div className="w-12 h-12 rounded-full border border-[#3f7a39]/20 flex items-center justify-center shrink-0">
-                              <MapPin className="w-5 h-5 text-[#3f7a39]" />
-                            </div>
-                            <div className="space-y-3">
-                              <h4 className="text-[#2d5a27]/40 font-bold text-xs tracking-[0.5em]">
-                                ගමනාන්තය
-                              </h4>
-                              <p className="text-xl md:text-2xl text-[#2d5a27] leading-relaxed tracking-wide font-bold">
-                                {INVITATION.venue.name}, {INVITATION.venue.city}
-                              </p>
-                            </div>
-                          </div>
-
-                          <div className="flex items-start gap-8">
-                            <div className="w-12 h-12 rounded-full border border-[#3f7a39]/20 flex items-center justify-center shrink-0">
-                              <Clock className="w-5 h-5 text-[#3f7a39]" />
-                            </div>
-                            <div className="space-y-1">
-                              <h4 className="text-[#2d5a27]/40 font-bold text-xs tracking-[0.5em]">
-                                පෝරුව චාරිත්‍ර
-                              </h4>
-                              <p className="text-xl md:text-2xl text-[#2d5a27] leading-relaxed tracking-wide font-bold">
-                                {INVITATION.time.ceremonyStart}
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-
-                        <button
-                          onClick={() => window.open(INVITATION.venue.googleMapsLink, "_blank")}
-                          className="w-full group relative inline-flex items-center justify-center gap-4 py-6 bg-[#2d5a27] text-white text-sm md:text-base font-bold tracking-[0.45em] overflow-hidden transition-all hover:bg-black shadow-xl mt-4"
-                        >
-                          <div className="absolute inset-0 bg-white/5 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-700" />
-                          <span className="relative z-10 flex items-center gap-3">
-                            <MapPin className="w-4 h-4" />
-                            සිතියම විවෘත කරන්න
-                          </span>
-                        </button>
-                      </div>
-                    </motion.div>
-                  </div>
-
-                  <div className="lg:col-span-7 order-1 lg:order-2">
-                    <motion.div
-                      initial={{ opacity: 0, scale: 0.95 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 1.2, ease: "circOut" }}
-                      className="relative w-full aspect-[4/3] md:aspect-video lg:aspect-[4/3] rounded-[3rem] overflow-hidden shadow-[0_80px_150px_-30px_rgba(0,0,0,0.25)] group bg-white"
-                    >
-                      <iframe
-                        src={`https://maps.google.com/maps?q=${encodeURIComponent(INVITATION.venue.mapQuery)}&t=&z=15&ie=UTF8&iwloc=&output=embed`}
-                        width="100%"
-                        height="100%"
-                        style={{ border: 0 }}
-                        allowFullScreen
-                        loading="lazy"
-                        className="w-full h-full grayscale-[0.85] contrast-150 sepia-[0.2] brightness-[1.05] hover:grayscale-0 hover:sepia-0 hover:contrast-100 transition-all duration-1000 scale-[1.02] group-hover:scale-100"
-                      />
-
-                      <div className="absolute inset-0 pointer-events-none border-[15px] md:border-[25px] border-white/95 rounded-[3rem]" />
-                      <div className="absolute inset-8 md:inset-12 pointer-events-none border border-white/20 rounded-[2.5rem]" />
-
-                      <div className="absolute top-0 right-0 w-40 h-40 bg-white/90 backdrop-blur-md flex flex-col items-center justify-center rounded-bl-full shadow-2xl p-8 transform translate-x-4 -translate-y-4 group-hover:translate-x-2 group-hover:-translate-y-2 transition-transform duration-700">
-                        <MapPin className="w-8 h-8 text-[#2d5a27] mb-2 opacity-80" />
-                        <span className="text-[11px] font-bold tracking-widest text-[#2d5a27]/50">
-                          බලන්න
-                        </span>
-                      </div>
-
-                      <div className="absolute inset-0 pointer-events-none bg-gradient-to-tr from-[#3f7a39]/5 to-transparent mix-blend-overlay" />
-                    </motion.div>
-
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: 0.6 }}
-                      className="inline-flex items-center gap-4 mt-8 px-8 py-3 bg-white border border-[#a2c5a0]/40 shadow-lg rounded-full"
-                    >
-                      <Sparkles className="w-4 h-4 text-[#3f7a39]" />
-                      <span className="text-sm md:text-base font-bold text-[#2d5a27] tracking-widest">
-                        {INVITATION.venue.city}
-                      </span>
-                    </motion.div>
-                  </div>
-                </div>
-              </div>
-            </section>
 
             <section className="w-full relative overflow-hidden bg-transparent py-24 md:py-32">
               <div className="container mx-auto px-6 max-w-5xl text-center">
