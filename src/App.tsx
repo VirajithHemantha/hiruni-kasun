@@ -201,13 +201,13 @@ function Gallery() {
   const marqueeImages = [...PRE_IMAGES, ...PRE_IMAGES, ...PRE_IMAGES];
 
   return (
-    <section className="relative py-28 md:py-40 bg-transparent overflow-hidden">
+    <section className="relative py-14 md:py-40 bg-transparent overflow-hidden">
       <div className="w-full relative z-10 text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="space-y-6 mb-16 px-6"
+          className="space-y-6 mb-10 md:mb-16 px-6"
         >
           <div className="flex flex-col items-center gap-4">
             <span className="text-[#1b4332] font-bold tracking-[0.8em] text-sm md:text-base opacity-40 uppercase">
@@ -600,7 +600,7 @@ export default function WeddingInvitation() {
 
             <section
               id="details"
-              className="relative pt-12 md:pt-20 pb-24 md:pb-32 w-full flex flex-col items-center bg-transparent overflow-hidden"
+              className="relative pt-8 md:pt-20 pb-12 md:pb-32 w-full flex flex-col items-center bg-transparent overflow-hidden"
             >
               <div className="absolute inset-4 md:inset-8 border-[1.5px] border-[#2d5a27]/20 pointer-events-none z-10" />
               <div className="absolute inset-5 md:inset-10 border-[0.5px] border-[#61a85c]/10 pointer-events-none z-10" />
@@ -625,7 +625,7 @@ export default function WeddingInvitation() {
                     <h3 className="text-3xl md:text-4xl font-bold text-[#3f7a39] my-2">
                       සයුරි,
                     </h3>
-                    
+
                     <p className="text-slate-700">
                       ඕ. කේ. අලුත්ගමගේ මහතාගේ සහ රංජනී රාජපක්ෂ මහත්මියගේ ආදරණීය පුත් වන
                     </p>
@@ -665,7 +665,7 @@ export default function WeddingInvitation() {
                   </h2>
                 </motion.div>
 
-                <div className="relative w-full flex flex-col items-center justify-center my-12 mb-24">
+                <div className="relative w-full flex flex-col items-center justify-center my-8 md:my-12 mb-12 md:mb-24">
                   <motion.div
                     initial={{ opacity: 0, y: 24 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -747,7 +747,7 @@ export default function WeddingInvitation() {
               </div>
             </section>
 
-            <section className="relative py-28 md:py-48 bg-[#2d5a27] flex flex-col items-center overflow-hidden">
+            <section className="relative py-14 md:py-48 bg-[#2d5a27] flex flex-col items-center overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/20 via-transparent to-black/20 pointer-events-none" />
 
               <motion.div
@@ -769,7 +769,7 @@ export default function WeddingInvitation() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 1 }}
-                  className="relative mb-20"
+                  className="relative mb-12 md:mb-20"
                 >
                   <div className="relative z-10 flex flex-col items-center">
                     <motion.div
@@ -800,7 +800,7 @@ export default function WeddingInvitation() {
                   whileInView={{ opacity: 0.8 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.8 }}
-                  className="mt-20 flex flex-col items-center gap-4"
+                  className="mt-12 md:mt-20 flex flex-col items-center gap-4"
                 >
                   <p className="text-sm md:text-base tracking-[0.6em] text-white font-bold text-center">
                     ආදරයෙන් පිරුණු මොහොතකට රැඳී සිටින්න
@@ -823,13 +823,13 @@ export default function WeddingInvitation() {
             <Gallery />
 
 
-            <section className="relative py-32 md:py-48 bg-transparent flex flex-col items-center overflow-hidden">
+            <section className="relative py-16 md:py-48 bg-transparent flex flex-col items-center overflow-hidden">
               <div className="container mx-auto px-4 max-w-4xl flex flex-col items-center relative z-10 w-full">
                 <motion.h2
                   initial={{ opacity: 0, y: -20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  className="text-2xl md:text-4xl text-slate-800 tracking-[0.3em] mb-12 text-center"
+                  className="text-2xl md:text-4xl text-slate-800 tracking-[0.3em] mb-8 md:mb-12 text-center"
                 >
                   පැමිණීම තහවුරු කිරීම
                 </motion.h2>
@@ -920,16 +920,75 @@ export default function WeddingInvitation() {
                   </div>
                 </motion.div>
 
-                <div className="mt-32 flex flex-col items-center gap-6 text-center w-full max-w-xl">
-                  <div className="h-px w-24 bg-slate-300" />
-                  <p className="text-slate-500 text-sm md:text-xs tracking-[0.4em] font-bold mt-2">
-                    සම්බන්ධතා
-                  </p>
 
-                  <div className="flex flex-wrap justify-center gap-x-10 gap-y-4 text-slate-500 text-lg md:text-base tracking-widest font-normal opacity-80 decoration-slate-300 underline-offset-4">
-                    {INVITATION.rsvpContacts.map((line) => (
-                      <p key={line}>{line}</p>
-                    ))}
+              </div>
+            </section>
+
+            <section className="relative py-14 md:py-48 bg-transparent overflow-hidden">
+              <div className="container mx-auto px-6 max-w-7xl relative z-10 text-center">
+
+
+                <div className="flex justify-center w-full">
+                  <div className="w-full max-w-[560px] text-left">
+                    <motion.div
+                      initial={{ opacity: 0, y: 30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: 0.2, duration: 0.8 }}
+                      className="bg-white p-10 md:p-16 shadow-[0_60px_100px_-40px_rgba(45,90,39,0.1)] border border-[#a2c5a0]/30 relative group"
+                    >
+                      <div className="absolute inset-2 border-[0.5px] border-[#3f7a39]/20 pointer-events-none group-hover:border-[#3f7a39]/40 transition-colors duration-700" />
+
+                      <div className="space-y-12 relative z-10">
+                        <div className="space-y-6">
+                          <p className="text-[#2d5a27] text-xl md:text-2xl font-light italic leading-relaxed text-center">
+                            “අපගේ ආදර කතාවේ අලංකාරම පරිච්ඡේදය ඔබ සමඟ සැමරීමට අප සතුටින් බලා සිටිමු.”
+                          </p>
+                          <div className="h-0.5 w-12 bg-[#a2c5a0]/60 mx-auto" />
+                        </div>
+
+                        <div className="space-y-10">
+                          <div className="flex items-start gap-8">
+                            <div className="w-12 h-12 rounded-full border border-[#3f7a39]/20 flex items-center justify-center shrink-0">
+                              <MapPin className="w-5 h-5 text-[#3f7a39]" />
+                            </div>
+                            <div className="space-y-3">
+                              <h4 className="text-[#2d5a27]/40 font-bold text-xs tracking-[0.5em]">
+                                ගමනාන්තය
+                              </h4>
+                              <p className="text-xl md:text-2xl text-[#2d5a27] leading-relaxed tracking-wide font-bold">
+                                {INVITATION.venue.name}, {INVITATION.venue.city}
+                              </p>
+                            </div>
+                          </div>
+
+                          <div className="flex items-start gap-8">
+                            <div className="w-12 h-12 rounded-full border border-[#3f7a39]/20 flex items-center justify-center shrink-0">
+                              <Clock className="w-5 h-5 text-[#3f7a39]" />
+                            </div>
+                            <div className="space-y-1">
+                              <h4 className="text-[#2d5a27]/40 font-bold text-xs tracking-[0.5em]">
+                                පෝරුව චාරිත්‍ර
+                              </h4>
+                              <p className="text-xl md:text-2xl text-[#2d5a27] leading-relaxed tracking-wide font-bold">
+                                {INVITATION.time.ceremonyStart}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <button
+                          onClick={() => window.open(INVITATION.venue.googleMapsLink, "_blank")}
+                          className="w-full group relative inline-flex items-center justify-center gap-4 py-6 bg-[#2d5a27] text-white text-sm md:text-base font-bold tracking-[0.45em] overflow-hidden transition-all hover:bg-black shadow-xl mt-4"
+                        >
+                          <div className="absolute inset-0 bg-white/5 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-700" />
+                          <span className="relative z-10 flex items-center gap-3">
+                            <MapPin className="w-4 h-4" />
+                            සිතියම විවෘත කරන්න
+                          </span>
+                        </button>
+                      </div>
+                    </motion.div>
                   </div>
                 </div>
               </div>
@@ -937,14 +996,15 @@ export default function WeddingInvitation() {
 
 
 
-            <section className="w-full relative overflow-hidden bg-transparent py-24 md:py-32">
+
+            <section className="w-full relative overflow-hidden bg-transparent py-14 md:py-32">
               <div className="container mx-auto px-6 max-w-5xl text-center">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 1.0 }}
-                  className="space-y-8"
+                  className="space-y-6"
                 >
                   <div className="flex items-center justify-center gap-3 opacity-70">
                     <div className="h-px w-10 bg-[#2d5a27]/20" />
@@ -960,7 +1020,20 @@ export default function WeddingInvitation() {
                     අපගේ විශේෂ දිනය ඔබ සමඟ ආදරයෙන් සැමරීමට අපි බලා සිටිමු.
                   </p>
 
-                  <p className="text-sm md:text-base tracking-[0.5em] text-[#2d5a27]/50 font-bold">
+                  <div className="pt-6 flex flex-col items-center gap-4 text-center w-full max-w-xl mx-auto">
+                    <div className="h-px w-24 bg-[#2d5a27]/20" />
+                    <p className="text-slate-500 text-xs tracking-[0.4em] font-bold mt-2">
+                      සම්බන්ධතා
+                    </p>
+
+                    <div className="flex flex-wrap justify-center gap-x-10 gap-y-2 text-[#2d5a27]/70 text-base tracking-widest font-normal">
+                      {INVITATION.rsvpContacts.map((line) => (
+                        <p key={line}>{line}</p>
+                      ))}
+                    </div>
+                  </div>
+
+                  <p className="text-sm md:text-base tracking-[0.5em] text-[#2d5a27]/50 font-bold pt-12">
                     © 2026 {INVITATION.couple.bride} සහ {INVITATION.couple.groom}
                   </p>
                 </motion.div>
