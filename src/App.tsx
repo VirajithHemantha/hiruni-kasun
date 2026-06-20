@@ -27,7 +27,6 @@ const INVITATION = {
     googleMapsLink: "https://maps.app.goo.gl/oFXbL74vBvHcvBX69",
   },
   rsvpContacts: [
-    "එස්. කුමාරප්පෙරුම – 0711-321721 / 071-2657070",
     "Maleesha - +94 71 969 2123",
     "Kavindu - +94 76 340 1507",
   ],
@@ -35,7 +34,7 @@ const INVITATION = {
 
 const backgroundMusic = "/handawaka-various-artists.mp3";
 const googleScriptUrl =
-  "https://script.google.com/macros/s/AKfycbyHN1BshRvxx96eATyW9C0rtkaNFXAoNAe9lh0TiO1uJ-eKzlwXTKglqTUSz5ZH-CoKqA/exec";
+  "https://script.google.com/macros/s/AKfycbx6tVTRxM0Fjc10fR0a35PjSjb9JJN-9F7zDpxyJvVMhdZ3A-_rOkAV8x8Cwpeqfp5NLw/exec";
 
 const publicImagePath = (fileName: string) => `/images/${fileName.replaceAll(" ", "%20")}`;
 const preImagePath = (fileName: string) => `/pre/${fileName.replaceAll(" ", "%20")}`;
@@ -165,16 +164,16 @@ function CountdownTimer({ isDark = false }: { isDark?: boolean }) {
         >
           <div
             className={`relative w-[4.5rem] h-[6.5rem] sm:w-20 sm:h-28 md:w-32 md:h-44 rounded-t-full shadow-[0_15px_35px_-10px_rgba(0,0,0,0.15)] flex flex-col items-center justify-center overflow-hidden transition-all duration-700 group-hover:-translate-y-3 ${isDark ? "bg-[#2d5a27] " : "bg-white "
- }`}
+              }`}
           >
             <div
               className={`absolute inset-1.5 sm:inset-2 md:inset-3 ] rounded-t-full pointer-events-none ${isDark ? "" : ""
- }`}
+                }`}
             />
 
             <span
               className={`font-numeric text-2xl sm:text-3xl md:text-5xl leading-none relative z-10 drop-shadow-sm mt-3 sm:mt-4 md:mt-6 transition-transform duration-500 group-hover:scale-110 ${isDark ? "text-white" : "text-[#2d5a27]"
- }`}
+                }`}
             >
               {Math.max(0, stat.value).toString().padStart(2, "0")}
             </span>
@@ -182,9 +181,9 @@ function CountdownTimer({ isDark = false }: { isDark?: boolean }) {
             <div className="w-full flex justify-center mt-2 sm:mt-3 md:mt-6 mb-1 sm:mb-2 relative z-10">
               <span
                 className={`text-[5px] sm:text-[6px] md:text-[11px] tracking-[0.2em] sm:tracking-[0.3em] md:tracking-[0.4em] font-bold px-2 sm:px-3 py-1 sm:py-1.5 rounded-full shadow-sm whitespace-nowrap ${isDark
- ? "bg-white/10 text-white "
- : "bg-stone-50 text-stone-500 "
- }`}
+                  ? "bg-white/10 text-white "
+                  : "bg-stone-50 text-stone-500 "
+                  }`}
               >
                 {stat.label}
               </span>
@@ -192,7 +191,7 @@ function CountdownTimer({ isDark = false }: { isDark?: boolean }) {
 
             <div
               className={`absolute bottom-2 sm:bottom-3 md:bottom-4 left-1/2 -translate-x-1/2 w-[3px] h-[3px] sm:w-1 sm:h-1 md:w-1.5 md:h-1.5 rotate-45 ${isDark ? "bg-white/40" : "bg-[#61a85c]"
- }`}
+                }`}
             />
           </div>
         </motion.div>
@@ -370,7 +369,7 @@ export default function WeddingInvitation() {
   return (
     <main
       className={`dl-manel-bold h-[100dvh] w-full bg-[#fae9cb] transition-all duration-1000 ${isOpened ? "overflow-y-auto overflow-x-hidden" : "overflow-hidden flex items-center justify-center"
- } relative scroll-smooth`}
+        } relative scroll-smooth`}
     >
       <FloatingPetals />
 
@@ -391,7 +390,7 @@ export default function WeddingInvitation() {
               autoPlay
               loop={!hasStarted}
               className={`w-full h-full object-cover transition-all duration-[2000ms] ease-out ${!hasStarted ? "blur-md scale-105 opacity-80" : "blur-0 scale-100 opacity-100"
- }`}
+                }`}
               onEnded={() => setIsOpened(true)}
               onError={(e) => { console.error("Video error:", e); setIsOpened(true); }}
             >
@@ -428,7 +427,7 @@ export default function WeddingInvitation() {
                         introVideoRef.current.currentTime = 0;
                         introVideoRef.current.play().catch((err) => console.log(err));
                       }
-                      
+
                       if (audioRef.current && !isPlaying) {
                         audioRef.current.play().then(() => setIsPlaying(true)).catch((err) => console.log("Audio play failed:", err));
                       }
@@ -709,7 +708,7 @@ export default function WeddingInvitation() {
                           <div className="text-base md:text-lg text-[#2d5a27] tracking-wide font-bold">
                             {INVITATION.venue.name}, {INVITATION.venue.city}
                           </div>
-                          <a 
+                          <a
                             href={INVITATION.venue.googleMapsLink}
                             target="_blank"
                             rel="noopener noreferrer"
@@ -871,7 +870,7 @@ export default function WeddingInvitation() {
                       {(rsvpStatus === "success" || rsvpStatus === "error") && (
                         <p
                           className={`text-xs text-center font-semibold ${rsvpStatus === "success" ? "text-emerald-600" : "text-red-500"
- }`}
+                            }`}
                         >
                           {rsvpStatus === "success"
                             ? "ඔබගේ පැමිණීම තහවුරු කිරීම සාර්ථකව යවා ඇත."
