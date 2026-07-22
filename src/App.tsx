@@ -623,7 +623,7 @@ export default function WeddingInvitation() {
 
                   <div className="text-[#2d5a27] space-y-6 max-w-3xl mx-auto leading-relaxed text-base md:text-lg">
                     <p className="text-slate-700 max-w-lg mx-auto">
-                      S. සරත් චන්ද්රසිරි මහතාගේ සහ K.W. ශ්රියානි මල්ලිකා මහත්මියගේ ආදරණීය පුත් වන
+                      S. සරත් චන්ද්රසිරි මහතාගේ සහ K.W. ශ්‍රියානි මල්ලිකා මහත්මියගේ ආදරණීය පුත් වන
                     </p>
                     <h3 className="text-3xl md:text-4xl font-bold text-[#3f7a39] my-2">
                       කසුන් මධුසංක
