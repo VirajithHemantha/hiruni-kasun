@@ -4,20 +4,20 @@ import { Sparkles, MapPin, Calendar, Clock, ChevronDown } from "lucide-react";
 
 const INVITATION = {
   couple: {
-    bride: "හිරුණි",
-    groom: "කසුන්",
-    brideFull: "හිරුණි",
-    groomFull: "කසුන්",
+    bride: "Hiruni",
+    groom: "Kasun",
+    brideFull: "Hiruni",
+    groomFull: "Kasun",
   },
   date: {
     displayNumeric: "14 . 08 . 2026",
-    displayLong: "වර්ෂ 2026 ක් වූ අගෝස්තු මස 14 වන දින",
+    displayLong: "14th of August 2026",
     countdownTarget: "2026-08-14T10:05:00+05:30",
   },
   time: {
-    ceremonyStart: "පෙ.ව. 10.05",
-    lunch: "ප.ව. 12.30",
-    departure: "ප.ව. 3.50",
+    ceremonyStart: "10.05 AM",
+    lunch: "12.30 PM",
+    departure: "3.50 PM",
   },
   venue: {
     name: "Nels Dimora Hotel",
@@ -26,8 +26,8 @@ const INVITATION = {
     googleMapsLink: "https://maps.app.goo.gl/BP2Lw5JMSKtXyxMXA?g_st=aw",
   },
   rsvpContacts: [
-    "හිරුණි",
-    "කසුන්",
+    "Hiruni",
+    "Kasun",
   ],
 } as const;
 
@@ -144,10 +144,10 @@ function CountdownTimer({ isDark = false }: { isDark?: boolean }) {
   const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
   const stats = [
-    { label: "දින", value: days },
-    { label: "පැය", value: hours },
-    { label: "මිනිත්තු", value: minutes },
-    { label: "තත්පර", value: seconds },
+    { label: "Days", value: days },
+    { label: "Hours", value: hours },
+    { label: "Minutes", value: minutes },
+    { label: "Seconds", value: seconds },
   ];
 
   return (
@@ -218,10 +218,10 @@ function Gallery() {
             <div className="h-px w-16 bg-[#52b788]/30" />
           </div>
           <h2 className="text-5xl md:text-8xl bg-gradient-to-r from-[#3f7a39] via-[#2d5a27] to-[#3f7a39] bg-clip-text text-transparent italic leading-none">
-            සුන්දර මතක
+            Beautiful Memories
           </h2>
           <p className="text-[#2d5a27]/70 text-sm md:text-base tracking-[0.3em] font-medium max-w-2xl mx-auto pt-2 leading-loose">
-            අපගේ ආදර කතාවේ සුන්දරතම මොහොතක් ඔබ සමඟ බෙදා ගැනීමට අප සතුටින් බලා සිටිමු.
+            We are excited to share a beautiful moment of our love story with you.
           </p>
         </motion.div>
 
@@ -280,7 +280,7 @@ export default function WeddingInvitation() {
 
   const submitToGoogleSheet = async (payload: Record<string, string>) => {
     if (!googleScriptUrl) {
-      throw new Error("Google Script URL tl ilid ke;");
+      throw new Error("Google Script URL missing");
     }
 
     const response = await fetch(googleScriptUrl, {
@@ -289,7 +289,7 @@ export default function WeddingInvitation() {
     });
 
     if (!response.ok) {
-      throw new Error("b,a,Su id¾:l fkdùh");
+      throw new Error("Request failed");
     }
   };
 
@@ -367,7 +367,7 @@ export default function WeddingInvitation() {
 
   return (
     <main
-      className={`dl-manel-bold h-[100dvh] w-full bg-[#fae9cb] transition-all duration-1000 ${isOpened ? "overflow-y-auto overflow-x-hidden" : "overflow-hidden flex items-center justify-center"
+      className={`english-font-class h-[100dvh] w-full bg-[#fae9cb] transition-all duration-1000 ${isOpened ? "overflow-y-auto overflow-x-hidden" : "overflow-hidden flex items-center justify-center"
         } relative scroll-smooth`}
     >
       <FloatingPetals />
@@ -410,10 +410,10 @@ export default function WeddingInvitation() {
                     className="mb-12"
                   >
                     <h2 className="text-4xl md:text-6xl text-[#2d5a27] mb-2 drop-shadow-[0_2px_10px_rgba(255,255,255,0.8)]">
-                      විවාහ ආරාධනයයි
+                      Wedding Invitation
                     </h2>
                     <p className="text-xl md:text-2xl text-[#2d5a27] tracking-[0.3em] drop-shadow-[0_2px_10px_rgba(255,255,255,0.8)]">
-                      {INVITATION.couple.bride} සහ {INVITATION.couple.groom}
+                      {INVITATION.couple.bride} & {INVITATION.couple.groom}
                     </p>
                   </motion.div>
 
@@ -436,7 +436,7 @@ export default function WeddingInvitation() {
                     <div className="absolute inset-0 bg-[#2d5a27] opacity-90 group-hover:opacity-100 transition-opacity" />
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
                     <span className="relative z-10 font-bold text-white text-sm tracking-[0.35em]">
-                      ආරාධනය විවෘත කරන්න
+                      Open Invitation
                     </span>
                   </button>
 
@@ -446,7 +446,7 @@ export default function WeddingInvitation() {
                     transition={{ delay: 1.5 }}
                     className="mt-8 text-[#2d5a27]/80 text-xs tracking-[0.35em]"
                   >
-                    ආරම්භ කිරීමට ක්ලික් කරන්න
+                    Click to start
                   </motion.div>
                 </motion.div>
               </div>
@@ -466,7 +466,7 @@ export default function WeddingInvitation() {
                     transition={{ duration: 2, delay: 0.8 }}
                     className="text-3xl md:text-7xl text-[#2d5a27] mb-8 drop-shadow-[0_2px_10px_rgba(255,255,255,0.8)]"
                   >
-                    විවාහ ආරාධනයයි!
+                    Wedding Invitation!
                   </motion.h2>
 
                   <div className="flex flex-col items-center w-full max-w-[280px] mx-auto">
@@ -505,7 +505,7 @@ export default function WeddingInvitation() {
                   onClick={() => setIsOpened(true)}
                   className="absolute bottom-10 right-10 z-[110] px-8 py-3 bg-white/40 backdrop-blur-md text-[#2d5a27] text-xs tracking-[0.35em] rounded-full hover:bg-white/60 transition-all font-bold"
                 >
-                  ආරාධනයට පිවිසෙන්න
+                  Enter Invitation
                 </motion.button>
               </>
             )}
@@ -524,7 +524,7 @@ export default function WeddingInvitation() {
               className="fixed top-6 right-6 z-50 bg-white/80 backdrop-blur-md p-3 rounded-full shadow-lg text-[#2d5a27] hover:bg-emerald-50 transition-colors"
             >
               <div className="flex flex-col items-center">
-                <div className="text-[11px] tracking-widest font-bold">වසා දමන්න</div>
+                <div className="text-[11px] tracking-widest font-bold">Close</div>
               </div>
             </motion.button>
 
@@ -558,7 +558,7 @@ export default function WeddingInvitation() {
 
                   <div className="mt-6 flex items-center justify-center gap-5">
                     <div className="h-px w-14 bg-[#2d5a27]/40" />
-                    <span className="text-4xl md:text-5xl text-[#2d5a27] drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] font-bold">සහ</span>
+                    <span className="text-4xl md:text-5xl text-[#2d5a27] drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] font-bold">&</span>
                     <div className="h-px w-14 bg-[#2d5a27]/40" />
                   </div>
 
@@ -574,7 +574,7 @@ export default function WeddingInvitation() {
                   className="mt-4 md:mt-12"
                 >
                   <p className="mt-1 md:mt-5 text-[#2d5a27]/70 text-sm md:text-base tracking-[0.15em] font-medium leading-loose max-w-2xl mx-auto">
-                    අපගේ ජීවිතයේ අමතක නොවන සුබ මොහොත ඔබ සමඟ බෙදා ගැනීමට කැමැත්තෙමු!
+                    We would love to share this unforgettable moment of our lives with you!
                   </p>
                 </motion.div>
               </div>
@@ -623,21 +623,21 @@ export default function WeddingInvitation() {
 
                   <div className="text-[#2d5a27] space-y-6 max-w-3xl mx-auto leading-relaxed text-base md:text-lg">
                     <p className="text-slate-700 max-w-lg mx-auto">
-                      K.A.D.S. කුමාර කුරුවිටආරච්චි මහතාගේ සහ R.P. ගීතානි සාලුකා රාජපක්ෂ මහත්මියගේ ආදරණීය දියණිය වන
+                      Beloved daughter of Mr. K.A.D.S. Kumara Kuruwitaarachchi and Mrs. R.P. Geethani Saluka Rajapaksha
                     </p>
                     <h3 className="text-3xl md:text-4xl font-bold text-[#3f7a39] my-2">
                       හිරුණි
                     </h3>
 
                     <p className="text-slate-700 mt-6 max-w-lg mx-auto">
-                      S. සරත් චන්ද්‍රසිරි මහතාගේ සහ K.W. ශ්‍රියානි මල්ලිකා මහත්මියගේ ආදරණීය පුත් වන
+                      Beloved son of Mr. S. Sarath Chandrasiri and Mrs. K.W. Shriyani Mallika
                     </p>
                     <h3 className="text-3xl md:text-4xl font-bold text-[#3f7a39] my-2">
                       කසුන්
                     </h3>
 
                     <p className="text-slate-700 max-w-2xl mx-auto pt-2">
-                      සමඟ අතිනත ගන්නා සොඳුරු මොහොත, ඔබගේ ආශීර්වාදයෙන් වර්ණවත් කර ගැනීමට සෙනෙහසින් ඇරයුම් කරන්නෙමු.
+                      Invite you to join them as they tie the knot and celebrate their love.
                     </p>
 
 
@@ -653,7 +653,7 @@ export default function WeddingInvitation() {
                   className="mb-8"
                 >
                   <h2 className="text-xl md:text-2xl text-[#3f7a39] tracking-[0.5em] font-bold">
-                    ශ්‍රී සුභ මංගලම්
+                    Wedding Celebration
                   </h2>
                 </motion.div>
 
@@ -691,13 +691,13 @@ export default function WeddingInvitation() {
                             වේලාව
                           </div>
                           <div className="text-base md:text-lg text-[#2d5a27] tracking-wide font-bold">
-                            පෝරුව චාරිත්‍ර: {INVITATION.time.ceremonyStart}
+                            Poruwa Ceremony: {INVITATION.time.ceremonyStart}
                           </div>
                           <div className="text-base md:text-lg text-[#2d5a27] tracking-wide font-bold mt-1">
-                            දිවා ආහාරය: {INVITATION.time.lunch}
+                            Lunch: {INVITATION.time.lunch}
                           </div>
                           <div className="text-base md:text-lg text-[#2d5a27] tracking-wide font-bold mt-1">
-                            පිටත්වීම: {INVITATION.time.departure}
+                            Departure: {INVITATION.time.departure}
                           </div>
                         </div>
                       </div>
@@ -762,7 +762,7 @@ export default function WeddingInvitation() {
                     />
 
                     <h2 className="text-3xl md:text-6xl text-white tracking-[0.25em] md:tracking-[0.4em] font-bold leading-tight">
-                      මෙම දිනය <span className="mx-2 md:mx-4 text-[#dcebe1]">සුරකින්න</span>
+                      Save <span className="mx-2 md:mx-4 text-[#dcebe1]">The Date</span>
                     </h2>
 
                     <div className="mt-10 flex items-center justify-center gap-6">
@@ -785,7 +785,7 @@ export default function WeddingInvitation() {
                   className="mt-12 md:mt-20 flex flex-col items-center gap-4"
                 >
                   <p className="text-sm md:text-base tracking-[0.6em] text-white font-bold text-center">
-                    ආදරයෙන් පිරුණු මොහොතකට රැඳී සිටින්න
+                    Join us for a moment filled with love
                   </p>
 
                   <div className="flex gap-2">
@@ -811,7 +811,7 @@ export default function WeddingInvitation() {
                   viewport={{ once: true }}
                   className="text-2xl md:text-4xl text-slate-800 tracking-[0.3em] mb-8 md:mb-12 text-center"
                 >
-                  පැමිණීම තහවුරු කිරීම
+                  RSVP
                 </motion.h2>
 
                 <motion.div
@@ -823,15 +823,15 @@ export default function WeddingInvitation() {
                 >
                   <div className="w-full rounded-[1.5rem] p-6 md:p-8 flex flex-col items-center">
                     <h3 className="text-2xl md:text-4xl text-slate-800 mb-8 text-center">
-                      ඔබ පැමිණෙන්නේද?
+                      Will you be attending?
                     </h3>
 
                     <form className="w-full space-y-6 text-left" onSubmit={handleRsvpSubmit}>
                       <div className="space-y-2">
-                        <label className="text-xs font-bold text-slate-500 ml-1">ඔබගේ නම</label>
+                        <label className="text-xs font-bold text-slate-500 ml-1">Your Name</label>
                         <input
                           type="text"
-                          placeholder="ඔබගේ නම මෙහි ලියන්න..."
+                          placeholder="Type your name here..."
                           value={rsvpForm.name}
                           onChange={(e) => {
                             setRsvpStatus("idle");
@@ -844,7 +844,7 @@ export default function WeddingInvitation() {
 
                       <div className="space-y-4 pt-2">
                         <label className="text-xs font-bold text-slate-500 ml-1">
-                          අපගේ විශේෂ දිනයට ඔබ පැමිණෙන්නේද?
+                          අපගේ විශේෂ දිනයට Will you be attending?
                         </label>
 
                         <button
@@ -856,7 +856,7 @@ export default function WeddingInvitation() {
                           aria-pressed={rsvpForm.guests !== "0"}
                           className={`w-full py-5 md:py-6 rounded-xl text-sm md:text-base tracking-wide transition-all shadow-sm flex items-center justify-center px-4 leading-relaxed active:scale-[0.98] ${rsvpForm.guests !== "0" ? "bg-[#2d5a27] text-white hover:bg-[#1a5c4a]" : "bg-[#f3f3f3] hover:bg-slate-200 text-slate-700"}`}
                         >
-                          ඔව්, මම ආදරයෙන් පැමිණෙන්නම්!
+                          Yes, I would love to attend!
                         </button>
 
                         <button
@@ -868,7 +868,7 @@ export default function WeddingInvitation() {
                           aria-pressed={rsvpForm.guests === "0"}
                           className={`w-full py-5 md:py-6 rounded-xl text-sm md:text-base tracking-wide transition-all shadow-sm flex items-center justify-center px-4 leading-relaxed active:scale-[0.98] ${rsvpForm.guests === "0" ? "bg-[#2d5a27] text-white hover:bg-[#1a5c4a]" : "bg-[#f3f3f3] hover:bg-slate-200 text-slate-700"}`}
                         >
-                          කණගාටුයි, මට පැමිණිය නොහැක. නමුත් මගේ ආශීර්වාදය ඔබ සමඟයි.
+                          Sorry, I won't be able to make it.
                         </button>
                       </div>
 
@@ -878,8 +878,8 @@ export default function WeddingInvitation() {
                             }`}
                         >
                           {rsvpStatus === "success"
-                            ? "ඔබගේ පැමිණීම තහවුරු කිරීම සාර්ථකව යවා ඇත."
-                            : "කරුණාකර ඔබගේ නම ඇතුළත් කර නැවත උත්සාහ කරන්න."}
+                            ? "ඔබගේ RSVP සාර්ථකව යවා ඇත."
+                            : "Please enter your name and try again."}
                         </p>
                       )}
 
@@ -889,11 +889,11 @@ export default function WeddingInvitation() {
                           disabled={rsvpStatus === "sending"}
                           className="w-full bg-[#2d5a27] text-white py-4 md:py-5 rounded-xl text-sm md:text-base tracking-[0.2em] font-bold hover:bg-[#1a5c4a] transition-all shadow-md disabled:opacity-70"
                         >
-                          {rsvpStatus === "sending" ? "යවමින්..." : "තහවුරු කරන්න"}
+                          {rsvpStatus === "sending" ? "Sending..." : "Submit"}
                         </button>
 
                         <p className="text-xs text-slate-400 mt-4 text-center leading-relaxed">
-                          ඔබගේ ප්‍රතිචාරය පුද්ගලිකව තබා ගනු ලැබේ.
+                          Your response will be kept private.
                         </p>
                       </div>
                     </form>
@@ -925,17 +925,15 @@ export default function WeddingInvitation() {
                   </div>
 
                   <h2 className="text-5xl md:text-7xl bg-gradient-to-r from-[#3f7a39] via-[#2d5a27] to-[#3f7a39] bg-clip-text text-transparent italic">
-                    ස්තූතියි
+                    Thank You
                   </h2>
 
                   <p className="text-[#2d5a27]/70 text-sm md:text-base tracking-[0.25em] font-medium leading-loose max-w-3xl mx-auto">
-                    සෙනෙහසින් ලියැවෙන අපගේ ජීවිත කතාවේ සුන්දරතම දිනය, ඔබගේ පැමිණීමෙන් තවත් අර්ථවත් වනු ඇතැයි අප විශ්වාස කරමු
+                    We believe that the most beautiful day of our love story will be even more meaningful with your presence.
                   </p>
 
-
-
                   <p className="text-sm md:text-base tracking-[0.5em] text-[#2d5a27]/50 font-bold pt-12">
-                    © 2026 {INVITATION.couple.bride} සහ {INVITATION.couple.groom}
+                    © 2026 {INVITATION.couple.bride} & {INVITATION.couple.groom}
                   </p>
                   <p className="text-[#2d5a27]/60 text-[10px] md:text-xs mt-4 font-sans tracking-wider">
                     Want a beautiful wedding website like this? Create yours with <a target="_blank" rel="noreferrer" className="text-[#3f7a39] hover:text-[#1b4332] underline font-semibold" href="https://wa.me/94707819074">invitemint</a>
@@ -975,8 +973,8 @@ export default function WeddingInvitation() {
       <style
         dangerouslySetInnerHTML={{
           __html: `
-            .dl-manel-bold,
-            .dl-manel-bold * {
+            .english-font-class,
+            .english-font-class * {
               font-family: 'Abhaya Libre', Arial, sans-serif !important;
             }
 
