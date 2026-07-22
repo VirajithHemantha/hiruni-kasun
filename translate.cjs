@@ -19,7 +19,7 @@ const replacements = {
     'b,a,Su id¾:l fkdùh': 'Request failed',
     'විවාහ ආරාධනයයි!': 'Wedding Invitation!',
     'විවාහ ආරාධනයයි': 'Wedding Invitation',
-    '{INVITATION.couple.bride} සහ {INVITATION.couple.groom}': '{INVITATION.couple.bride} & {INVITATION.couple.groom}',
+    '{INVITATION.couple.groom} සහ {INVITATION.couple.bride}': '{INVITATION.couple.groom} & {INVITATION.couple.bride}',
     'ආරාධනය විවෘත කරන්න': 'Open Invitation',
     'ආරම්භ කිරීමට ක්ලික් කරන්න': 'Click to start',
     'ආරාධනයට පිවිසෙන්න': 'Enter Invitation',

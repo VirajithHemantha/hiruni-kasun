@@ -31,9 +31,9 @@ const INVITATION = {
   ],
 } as const;
 
-const backgroundMusic = "/kusum-pipena-wasanthe-sulan-kurullo-harshana-dissanayaka-janaka-wickramasinghe.mp3";
+const backgroundMusic = "/WhatsApp%20Audio%202026-07-23%20at%2002.39.49.mp4";
 const googleScriptUrl =
-  "https://script.google.com/macros/s/AKfycbx6tVTRxM0Fjc10fR0a35PjSjb9JJN-9F7zDpxyJvVMhdZ3A-_rOkAV8x8Cwpeqfp5NLw/exec";
+  "https://script.google.com/macros/s/AKfycbz_xliEd5Gm1yvy3hcstoP7gBZeLVsgXkW05mf8N1_lpW-IViHX3LSODI2dGY3qe7A/exec";
 
 const publicImagePath = (fileName: string) => `/images/${fileName.replaceAll(" ", "%20")}`;
 const preImagePath = (fileName: string) => `/pre/${fileName.replaceAll(" ", "%20")}`;
@@ -413,7 +413,7 @@ export default function WeddingInvitation() {
                       විවාහ ආරාධනයයි
                     </h2>
                     <p className="text-xl md:text-2xl text-[#2d5a27] tracking-[0.3em] drop-shadow-[0_2px_10px_rgba(255,255,255,0.8)]">
-                      {INVITATION.couple.bride} සහ {INVITATION.couple.groom}
+                      {INVITATION.couple.groom} සහ {INVITATION.couple.bride}
                     </p>
                   </motion.div>
 
@@ -476,7 +476,7 @@ export default function WeddingInvitation() {
                       transition={{ duration: 2, delay: 1.2 }}
                       className="text-3xl md:text-6xl text-[#2d5a27] tracking-[0.3em] font-bold drop-shadow-[0_2px_10px_rgba(255,255,255,0.8)] self-start"
                     >
-                      {INVITATION.couple.bride}
+                      {INVITATION.couple.groom}
                     </motion.p>
 
                     <motion.span
@@ -494,7 +494,7 @@ export default function WeddingInvitation() {
                       transition={{ duration: 2, delay: 1.8 }}
                       className="text-3xl md:text-6xl text-[#2d5a27] tracking-[0.4em] font-bold drop-shadow-[0_2px_10px_rgba(255,255,255,0.8)] self-end"
                     >
-                      {INVITATION.couple.groom}
+                      {INVITATION.couple.bride}
                     </motion.p>
                   </div>
                 </motion.div>
@@ -553,7 +553,7 @@ export default function WeddingInvitation() {
                   className="mt-10"
                 >
                   <h1 className="text-6xl sm:text-7xl md:text-8xl text-[#2d5a27] italic leading-none drop-shadow-[0_0_15px_rgba(255,255,255,0.9)]">
-                    {INVITATION.couple.bride}
+                    {INVITATION.couple.groom}
                   </h1>
 
                   <div className="mt-6 flex items-center justify-center gap-5">
@@ -563,7 +563,7 @@ export default function WeddingInvitation() {
                   </div>
 
                   <h1 className="mt-6 text-6xl sm:text-7xl md:text-8xl text-[#2d5a27] italic leading-none drop-shadow-[0_0_15px_rgba(255,255,255,0.9)]">
-                    {INVITATION.couple.groom}
+                    {INVITATION.couple.bride}
                   </h1>
                 </motion.div>
 
@@ -623,17 +623,17 @@ export default function WeddingInvitation() {
 
                   <div className="text-[#2d5a27] space-y-6 max-w-3xl mx-auto leading-relaxed text-base md:text-lg">
                     <p className="text-slate-700 max-w-lg mx-auto">
-                      K.A.D.S. කුමාර කුරුවිටආරච්චි මහතාගේ සහ R.P. ගීතානි සාලුකා රාජපක්ෂ මහත්මියගේ ආදරණීය දියණිය වන
-                    </p>
-                    <h3 className="text-3xl md:text-4xl font-bold text-[#3f7a39] my-2">
-                      හිරුණි
-                    </h3>
-
-                    <p className="text-slate-700 mt-6 max-w-lg mx-auto">
                       S. සරත් චන්ද්‍රසිරි මහතාගේ සහ K.W. ශ්‍රියානි මල්ලිකා මහත්මියගේ ආදරණීය පුත් වන
                     </p>
                     <h3 className="text-3xl md:text-4xl font-bold text-[#3f7a39] my-2">
                       කසුන්
+                    </h3>
+
+                    <p className="text-slate-700 mt-6 max-w-lg mx-auto">
+                      K.A.D.S. කුමාර කුරුවිටආරච්චි මහතාගේ සහ R.P. ගීතානි සාලුකා රාජපක්ෂ මහත්මියගේ ආදරණීය දියණිය වන
+                    </p>
+                    <h3 className="text-3xl md:text-4xl font-bold text-[#3f7a39] my-2">
+                      හිරුණි
                     </h3>
 
                     <p className="text-slate-700 max-w-2xl mx-auto pt-2">
@@ -935,7 +935,7 @@ export default function WeddingInvitation() {
 
 
                   <p className="text-sm md:text-base tracking-[0.5em] text-[#2d5a27]/50 font-bold pt-12">
-                    © 2026 {INVITATION.couple.bride} සහ {INVITATION.couple.groom}
+                    © 2026 {INVITATION.couple.groom} සහ {INVITATION.couple.bride}
                   </p>
                   <p className="text-[#2d5a27]/60 text-[10px] md:text-xs mt-4 font-sans tracking-wider">
                     Want a beautiful wedding website like this? Create yours with <a target="_blank" rel="noreferrer" className="text-[#3f7a39] hover:text-[#1b4332] underline font-semibold" href="https://wa.me/94707819074">invitemint</a>

@@ -25,7 +25,7 @@
 30: "පවුල: ",
 32: } as const;
 34: const backgroundMusic = "/Brooklyn Duo - A Thousand Years [WEDDING VERSION].mp3";
-35: const googleScriptUrl = "https://script.google.com/macros/s/AKfycbyHN1BshRvxx96eATyW9C0rtkaNFXAoNAe9lh0TiO1uJ-eKzlwXTKglqTUSz5ZH-CoKqA/exec";
+35: const googleScriptUrl = "https://script.google.com/macros/s/AKfycbz_xliEd5Gm1yvy3hcstoP7gBZeLVsgXkW05mf8N1_lpW-IViHX3LSODI2dGY3qe7A/exec";
 37: const publicImagePath = (fileName: string) => `/images/${fileName.replaceAll(" ", "%20")}`;
 39: const HERO_BACKGROUND_IMAGE = publicImagePath("1 (4).jpg");
 42: function FloatingPetals() {
